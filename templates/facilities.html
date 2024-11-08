@@ -1,0 +1,33 @@
+<!-- templates/facilities.html -->
+{% extends "base.html" %}
+{% block title %}Facilities{% endblock %}
+{% block content %}
+<div class="text-center my-4">
+    <h2 class="text-3xl font-semibold">Facilities</h2>
+    <p class="text-gray-600">View and manage facilities information below.</p>
+</div>
+<div class="table-responsive">
+    <table class="table table-hover shadow-md bg-white">
+        <thead class="thead-dark">
+            <tr>
+                <th>Facility ID</th>
+                <th>Name</th>
+                <th>Address</th>
+                
+                <th>NAICS Code</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for facility in facilities %}
+                <tr>
+                    <td>{{ facility[0] }}</td>
+                    <td>{{ facility[1] }}</td>
+                    <td>{{ facility[2] }}</td>
+                    <td>{{ facility[3] }}</td>
+                    
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

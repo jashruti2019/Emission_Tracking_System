@@ -1,0 +1,35 @@
+<!-- templates/basins.html -->
+{% extends "base.html" %}
+
+{% block title %}Basins{% endblock %}
+
+{% block content %}
+<div class="text-center my-4">
+    <h2 class="text-3xl font-semibold">Basins</h2>
+    <p class="text-gray-600">View and manage basin data below.</p>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-hover shadow-md bg-white">
+        <thead class="thead-dark">
+            <tr>
+                <th>Basin ID</th>
+                <th>Name</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for basin in basins %}
+                <tr>
+                    <td>{{ basin[0] }}</td> <!-- BasinID -->
+                    <td>{{ basin[1] }}</td> <!-- BasinName -->
+                    <td>{{ basin[2] }}</td> <!-- BasinLatitude -->
+                    <td>{{ basin[3] }}</td> <!-- BasinLongitude -->
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</div>
+{% endblock %}

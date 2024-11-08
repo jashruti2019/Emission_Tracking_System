@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Additional styling for a more presentable layout */
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .btn-group-custom {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Emission Tracking System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <div class="container mt-5">
+        <h1 class="text-center">Welcome to the Dashboard</h1>
+        <p class="text-center">Navigate through different sections to view information.</p>
+
+        <div class="row mt-4">
+            <!-- Emissions Section -->
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Emissions</h5>
+                        <p class="card-text">View and manage emissions data.</p>
+                        <div class="btn-group-custom">
+                            <a href="/add_emissions" class="btn btn-outline-primary">Add Emissions</a>
+                            <a href="/emissions" class="btn btn-outline-primary">View Emissions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facilities Section -->
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Facilities</h5>
+                        <p class="card-text">Explore and manage facility details.</p>
+                        <div class="btn-group-custom">
+                            <a href="/add_facility" class="btn btn-outline-primary">Add Facility</a>
+                            <a href="/facilities" class="btn btn-outline-primary">View Facilities</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- Basins Section -->
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Basins</h5>
+                        <p class="card-text">View basin data and statistics.</p>
+                        <div class="btn-group-custom">
+                            <a href="/add_basin" class="btn btn-outline-primary">Add Basin</a>
+                            <a href="/basins" class="btn btn-outline-primary">View Basins</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

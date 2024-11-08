@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emissions Data</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Emissions Data</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Emission ID</th>
+                    <th>N2O (tons)</th>
+                    <th>CH4 (tons)</th>
+                    <th>CO2 (tons)</th>
+                    <th>Year</th>
+                    <th>Total Emission (tons)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for emission in emissions %}
+                <tr>
+                    <td>{{ emission[0] }}</td>
+                    <td>{{ emission[1] }}</td>
+                    <td>{{ emission[2] }}</td>
+                    <td>{{ emission[3] }}</td>
+                    <td>{{ emission[4] }}</td>
+                    <td>{{ emission[5] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
